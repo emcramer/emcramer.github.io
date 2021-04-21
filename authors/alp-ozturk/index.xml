@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Alp Ozturk | Eric Cramer</title>
+    <link>http://emcramer.github.io/authors/alp-ozturk/</link>
+      <atom:link href="http://emcramer.github.io/authors/alp-ozturk/index.xml" rel="self" type="application/rss+xml" />
+    <description>Alp Ozturk</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© `2021`</copyright><lastBuildDate>Tue, 01 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://emcramer.github.io/images/icon_hud9b055eee01d4de0eb2efdace9b98bee_9571_512x512_fill_lanczos_center_2.png</url>
+      <title>Alp Ozturk</title>
+      <link>http://emcramer.github.io/authors/alp-ozturk/</link>
+    </image>
+    
+    <item>
+      <title>Predicting the Incidence of Pressure Ulcers in the Intensive Care Unit Using Machine Learning</title>
+      <link>http://emcramer.github.io/publication/cramer-2019/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>http://emcramer.github.io/publication/cramer-2019/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

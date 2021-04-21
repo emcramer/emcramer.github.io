@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects | Eric Cramer</title>
+    <link>http://emcramer.github.io/project/</link>
+      <atom:link href="http://emcramer.github.io/project/index.xml" rel="self" type="application/rss+xml" />
+    <description>Projects</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© `2021`</copyright><lastBuildDate>Sat, 28 Mar 2020 11:36:43 -0800</lastBuildDate>
+    <image>
+      <url>http://emcramer.github.io/images/icon_hud9b055eee01d4de0eb2efdace9b98bee_9571_512x512_fill_lanczos_center_2.png</url>
+      <title>Projects</title>
+      <link>http://emcramer.github.io/project/</link>
+    </image>
+    
+    <item>
+      <title>COVID-19 Tracker</title>
+      <link>http://emcramer.github.io/project/covid19tracker/</link>
+      <pubDate>Sat, 28 Mar 2020 11:36:43 -0800</pubDate>
+      <guid>http://emcramer.github.io/project/covid19tracker/</guid>
+      <description>&lt;h1 id=&#34;tracking-the-covid-19-pandemic&#34;&gt;Tracking the COVID-19 Pandemic&lt;/h1&gt;
+&lt;p&gt;After my county instituted a shelter-in-place lockdown due to the COVID-19 pandemic (caused by the SARS-CoV-2 virus), I was curious to know how bad the situation was. The nonpartisan website &lt;a href=&#34;https://usafacts.org/&#34;&gt;usafacts.org/&lt;/a&gt; publishes national, state, and county level data for the United States, and provides a substantial amount of information for making your own calculations and conclusions.&lt;/p&gt;
+&lt;p&gt;I am particularly interested in the &lt;strong&gt;change rate&lt;/strong&gt;, the change in the number of new cases of COVID-19 per day. This simple calculation gives an estimate of how quickly the virus is spreading, and whether measures put in place to curb the disease are working.&lt;/p&gt;
+&lt;p&gt;I intend to add other metrics to this project, such as R0 calculations and forecasting.&lt;/p&gt;
+&lt;iframe width=&#34;720&#34; height=&#34;480&#34; scrolling=&#34;no&#34; frameborder=&#34;no&#34;  src=&#34;https://eric-cramer.shinyapps.io/covid19tracker/&#34;&gt;&lt;/iframe&gt;
+&lt;p&gt;Open the tracking tool in a separate window &lt;a href=&#34;https://eric-cramer.shinyapps.io/covid19tracker/&#34;&gt;here&lt;/a&gt;. GitHub repository &lt;a href=&#34;https://github.com/emcramer/covid19project&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Predicting CRPS Limb Affectation</title>
+      <link>http://emcramer.github.io/project/apa2018/</link>
+      <pubDate>Tue, 21 Jan 2020 16:16:25 -0800</pubDate>
+      <guid>http://emcramer.github.io/project/apa2018/</guid>
+      <description>&lt;h1 id=&#34;predicting-crps-limb-affectation-from-physical-and-psychological-factors&#34;&gt;Predicting CRPS Limb Affectation from Physical and Psychological Factors&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.ninds.nih.gov/Disorders/Patient-Caregiver-Education/Fact-Sheets/Complex-Regional-Pain-Syndrome-Fact-Sheet&#34;&gt;Complex Regional Pain Syndrome (CRPS)&lt;/a&gt; is a severe and rare chronic pain condition that often spreads from an initially affected limb to other parts of the body. The underlying etiology and factors that influence the spread of CRPS are not well understood. Previous research has sought to explain the mechanism, onset, and pain severity of CRPS, however, the contribution of psychosocial factors to CRPS affectation has not been investigated fully.&lt;/p&gt;
+&lt;p&gt;I extracted data from the &lt;a href=&#34;https://choir.stanford.edu/&#34;&gt;Collaborative Health Outcomes Information Registry (CHOIR)&lt;/a&gt;, which is an electronic patient registry and learning health system. Then I trained a random forest model to describe the role of psychophysical and psychosocial factors as predictors of CRPS limb affectation. To train my model, I defined several &amp;ldquo;classes&amp;rdquo; of CRPS affectation such as ipsilateral and contralateral spread.&lt;/p&gt;
+&lt;p&gt;I presented my findings at the American Psychological Association&#39;s 126th annual convention in San Francisco, and my presentation received the Society for Health Psychology&#39;s Oustanding Poster Presentation award.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;apa-sfhp-award-2.jpg&#34; alt=&#34;Award certificate&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Modeling Calmodulin</title>
+      <link>http://emcramer.github.io/project/bmi214/</link>
+      <pubDate>Tue, 21 Jan 2020 16:03:23 -0800</pubDate>
+      <guid>http://emcramer.github.io/project/bmi214/</guid>
+      <description>&lt;h1 id=&#34;modeling-calmodulin&#34;&gt;Modeling Calmodulin&lt;/h1&gt;
+&lt;p&gt;One of our projects in &lt;a href=&#34;http://explorecourses.stanford.edu/search?view=catalog&amp;filter-coursestatus-Active=on&amp;page=0&amp;catalog=&amp;academicYear=20152016&amp;q=cs+107e&amp;collapse=&#34;&gt;BMI 214 (Representational Algorithms for Molecular Biology)&lt;/a&gt; taught by &lt;a href=&#34;https://en.wikipedia.org/wiki/Russ_Altman&#34;&gt;Dr. Russ Altman&lt;/a&gt;, was to create a molecular dynamics simulation of a protein. &lt;a href=&#34;https://en.wikipedia.org/wiki/Molecular_dynamics&#34;&gt;Molecular Dynamics&lt;/a&gt; is using computers to simulate the interaction of atoms and molecules for a period of time under known laws of physics. I represented a fragment of the protein &lt;a href=&#34;https://en.wikipedia.org/wiki/Calmodulin&#34;&gt;calmodulin&lt;/a&gt; by simulating the interactions of its component atoms (each atom within each amino acid). This entails modeling (simulating) how each atom&#39;s mass, velocity, energy, and forces change over time, and calculating the effect of the previous moment in time on the subsequent moment.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Exon Mutability Score</title>
+      <link>http://emcramer.github.io/project/bmi273/</link>
+      <pubDate>Tue, 21 Jan 2020 11:36:43 -0800</pubDate>
+      <guid>http://emcramer.github.io/project/bmi273/</guid>
+      <description>&lt;h1 id=&#34;class-project&#34;&gt;Class Project&lt;/h1&gt;
+&lt;p&gt;For the final project of &lt;a href=&#34;http://explorecourses.stanford.edu/search?view=catalog&amp;amp;filter-coursestatus-Active=on&amp;amp;page=0&amp;amp;catalog=&amp;amp;academicYear=20172018&amp;amp;q=biomedin273a&amp;amp;collapse=&#34;&gt;BMI 273A (The Human Genome Source Code)&lt;/a&gt; taught by &lt;a href=&#34;http://bejerano.stanford.edu/pi.html&#34;&gt;Dr. Gill Bejarano&lt;/a&gt;, I worked with a group to devise a statistic to measure how &amp;ldquo;mutable&amp;rdquo; a given exon is (some mutations impact the function of an exoonic product, while others do not, ie. synonymous vs. nonsynonymous mutations). We used the &lt;a href=&#34;http://exac.broadinstitute.org/&#34;&gt;ExAC&lt;/a&gt; dataset to isolate exons and calculate an &lt;em&gt;EMTM&lt;/em&gt; score, our version of the &lt;a href=&#34;https://doi.org/10.1371/journal.pgen.1003709&#34;&gt;RVIS score&lt;/a&gt;. We presented our metric, and maintain the results, explorations, and code on &lt;a href=&#34;https://github.com/ostrowr/cs273a-project&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;rvis-lollipop.png&#34; alt=&#34;Exon mutabilities of each chromosome based on our mutability score.&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>coursework | Eric Cramer</title>
+    <link>http://emcramer.github.io/categories/coursework/</link>
+      <atom:link href="http://emcramer.github.io/categories/coursework/index.xml" rel="self" type="application/rss+xml" />
+    <description>coursework</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© `2021`</copyright><lastBuildDate>Tue, 21 Jan 2020 16:03:23 -0800</lastBuildDate>
+    <image>
+      <url>http://emcramer.github.io/images/icon_hud9b055eee01d4de0eb2efdace9b98bee_9571_512x512_fill_lanczos_center_2.png</url>
+      <title>coursework</title>
+      <link>http://emcramer.github.io/categories/coursework/</link>
+    </image>
+    
+    <item>
+      <title>Modeling Calmodulin</title>
+      <link>http://emcramer.github.io/project/bmi214/</link>
+      <pubDate>Tue, 21 Jan 2020 16:03:23 -0800</pubDate>
+      <guid>http://emcramer.github.io/project/bmi214/</guid>
+      <description>&lt;h1 id=&#34;modeling-calmodulin&#34;&gt;Modeling Calmodulin&lt;/h1&gt;
+&lt;p&gt;One of our projects in &lt;a href=&#34;http://explorecourses.stanford.edu/search?view=catalog&amp;filter-coursestatus-Active=on&amp;page=0&amp;catalog=&amp;academicYear=20152016&amp;q=cs+107e&amp;collapse=&#34;&gt;BMI 214 (Representational Algorithms for Molecular Biology)&lt;/a&gt; taught by &lt;a href=&#34;https://en.wikipedia.org/wiki/Russ_Altman&#34;&gt;Dr. Russ Altman&lt;/a&gt;, was to create a molecular dynamics simulation of a protein. &lt;a href=&#34;https://en.wikipedia.org/wiki/Molecular_dynamics&#34;&gt;Molecular Dynamics&lt;/a&gt; is using computers to simulate the interaction of atoms and molecules for a period of time under known laws of physics. I represented a fragment of the protein &lt;a href=&#34;https://en.wikipedia.org/wiki/Calmodulin&#34;&gt;calmodulin&lt;/a&gt; by simulating the interactions of its component atoms (each atom within each amino acid). This entails modeling (simulating) how each atom&#39;s mass, velocity, energy, and forces change over time, and calculating the effect of the previous moment in time on the subsequent moment.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Exon Mutability Score</title>
+      <link>http://emcramer.github.io/project/bmi273/</link>
+      <pubDate>Tue, 21 Jan 2020 11:36:43 -0800</pubDate>
+      <guid>http://emcramer.github.io/project/bmi273/</guid>
+      <description>&lt;h1 id=&#34;class-project&#34;&gt;Class Project&lt;/h1&gt;
+&lt;p&gt;For the final project of &lt;a href=&#34;http://explorecourses.stanford.edu/search?view=catalog&amp;amp;filter-coursestatus-Active=on&amp;amp;page=0&amp;amp;catalog=&amp;amp;academicYear=20172018&amp;amp;q=biomedin273a&amp;amp;collapse=&#34;&gt;BMI 273A (The Human Genome Source Code)&lt;/a&gt; taught by &lt;a href=&#34;http://bejerano.stanford.edu/pi.html&#34;&gt;Dr. Gill Bejarano&lt;/a&gt;, I worked with a group to devise a statistic to measure how &amp;ldquo;mutable&amp;rdquo; a given exon is (some mutations impact the function of an exoonic product, while others do not, ie. synonymous vs. nonsynonymous mutations). We used the &lt;a href=&#34;http://exac.broadinstitute.org/&#34;&gt;ExAC&lt;/a&gt; dataset to isolate exons and calculate an &lt;em&gt;EMTM&lt;/em&gt; score, our version of the &lt;a href=&#34;https://doi.org/10.1371/journal.pgen.1003709&#34;&gt;RVIS score&lt;/a&gt;. We presented our metric, and maintain the results, explorations, and code on &lt;a href=&#34;https://github.com/ostrowr/cs273a-project&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;rvis-lollipop.png&#34; alt=&#34;Exon mutabilities of each chromosome based on our mutability score.&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

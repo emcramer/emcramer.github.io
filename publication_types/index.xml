@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publication_types | Eric Cramer</title>
+    <link>http://emcramer.github.io/publication_types/</link>
+      <atom:link href="http://emcramer.github.io/publication_types/index.xml" rel="self" type="application/rss+xml" />
+    <description>Publication_types</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© `2021`</copyright><lastBuildDate>Sun, 18 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://emcramer.github.io/images/icon_hud9b055eee01d4de0eb2efdace9b98bee_9571_512x512_fill_lanczos_center_2.png</url>
+      <title>Publication_types</title>
+      <link>http://emcramer.github.io/publication_types/</link>
+    </image>
+    
+    <item>
+      <title>2</title>
+      <link>http://emcramer.github.io/publication_types/2/</link>
+      <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>http://emcramer.github.io/publication_types/2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>1</title>
+      <link>http://emcramer.github.io/publication_types/1/</link>
+      <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
+      <guid>http://emcramer.github.io/publication_types/1/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

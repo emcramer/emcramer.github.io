@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Eric Cramer</title>
+    <link>http://emcramer.github.io/authors/eric-cramer/</link>
+      <atom:link href="http://emcramer.github.io/authors/eric-cramer/index.xml" rel="self" type="application/rss+xml" />
+    <description>Eric Cramer</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© `2021`</copyright><lastBuildDate>Sun, 18 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://emcramer.github.io/images/icon_hud9b055eee01d4de0eb2efdace9b98bee_9571_512x512_fill_lanczos_center_2.png</url>
+      <title>Eric Cramer</title>
+      <link>http://emcramer.github.io/authors/eric-cramer/</link>
+    </image>
+    
+    <item>
+      <title>Acute Pain Predictors of Remote Postoperative Pain Resolution After Hand Surgery</title>
+      <link>http://emcramer.github.io/publication/hah-2021/</link>
+      <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>http://emcramer.github.io/publication/hah-2021/</guid>
+      <description>&lt;script type=&#34;text/javascript&#34; src=&#34;https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;div class=&#34;altmetric-embed&#34; data-badge-type=&#34;donut&#34; data-altmetric-id=&#34;104265284&#34; data-doi=&#34;10.1007/s40122-021-00263-y&#34;&gt;&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The association of the Stanford Expectations of Treatment Scale (SETS) with expectations on pain and opioid dose in a patient-centered prescription opioid tapering program</title>
+      <link>http://emcramer.github.io/talk/aapm2021/</link>
+      <pubDate>Sun, 24 Jan 2021 17:01:15 -0800</pubDate>
+      <guid>http://emcramer.github.io/talk/aapm2021/</guid>
+      <description>&lt;p&gt;The Stanford Expectations of Treatment Scale (SETS) is a tool developed to measure patient outcome expectancy prior to treatment. It has been validated in patients receiving surgical and pain interventions, but its relationship with expectancies regarding opioid use tapering has not previously been examined. We aim to characterize the relationship between the SETS scores and patient expectancy regarding opioid tapering and pain levels post tapering.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Development and validation of the Collaborative Health Outcomes Information Registry body map</title>
+      <link>http://emcramer.github.io/publication/scherrer-2021/</link>
+      <pubDate>Sun, 24 Jan 2021 16:44:05 -0800</pubDate>
+      <guid>http://emcramer.github.io/publication/scherrer-2021/</guid>
+      <description>&lt;script type=&#34;text/javascript&#34; src=&#34;https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js&#34;&gt;&lt;/script&gt;&lt;div class=&#34;altmetric-embed&#34; data-badge-type=&#34;donut&#34; data-altmetric-id=&#34;98609954&#34; /&gt;
+&lt;p&gt;&lt;strong&gt;Introduction:&lt;/strong&gt; 
+Critical for the diagnosis and treatment of chronic pain is the anatomical distribution of pain. Several body maps allow patients to indicate pain areas on paper; however, each has its limitations.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Objectives:&lt;/strong&gt; 
+To provide a comprehensive body map that can be universally applied across pain conditions, we developed the electronic Collaborative Health Outcomes Information Registry (CHOIR) self-report body map by performing an environmental scan and assessing existing body maps.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Methods:&lt;/strong&gt; 
+After initial validation using a Delphi technique, we compared (1) pain location questionnaire responses of 530 participants with chronic pain with (2) their pain endorsements on the CHOIR body map (CBM) graphic. A subset of participants (n = 278) repeated the survey 1 week later to assess test–retest reliability. Finally, we interviewed a patient cohort from a tertiary pain management clinic (n = 28) to identify reasons for endorsement discordances.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Results:&lt;/strong&gt; 
+The intraclass correlation coefficient between the total number of body areas endorsed on the survey and those from the body map was 0.86 and improved to 0.93 at follow-up. The intraclass correlation coefficient of the 2 body map graphics separated by 1 week was 0.93. Further examination demonstrated high consistency between the questionnaire and CBM graphic (&amp;lt;10% discordance) in most body areas except for the back and shoulders (≈15–19% discordance). Participants attributed inconsistencies to misinterpretation of body regions and laterality, the latter of which was addressed by modifying the instructions.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Conclusions:&lt;/strong&gt; 
+Our data suggest that the CBM is a valid and reliable instrument for assessing the distribution of pain.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>COVID-19 Tracker</title>
+      <link>http://emcramer.github.io/project/covid19tracker/</link>
+      <pubDate>Sat, 28 Mar 2020 11:36:43 -0800</pubDate>
+      <guid>http://emcramer.github.io/project/covid19tracker/</guid>
+      <description>&lt;h1 id=&#34;tracking-the-covid-19-pandemic&#34;&gt;Tracking the COVID-19 Pandemic&lt;/h1&gt;
+&lt;p&gt;After my county instituted a shelter-in-place lockdown due to the COVID-19 pandemic (caused by the SARS-CoV-2 virus), I was curious to know how bad the situation was. The nonpartisan website &lt;a href=&#34;https://usafacts.org/&#34;&gt;usafacts.org/&lt;/a&gt; publishes national, state, and county level data for the United States, and provides a substantial amount of information for making your own calculations and conclusions.&lt;/p&gt;
+&lt;p&gt;I am particularly interested in the &lt;strong&gt;change rate&lt;/strong&gt;, the change in the number of new cases of COVID-19 per day. This simple calculation gives an estimate of how quickly the virus is spreading, and whether measures put in place to curb the disease are working.&lt;/p&gt;
+&lt;p&gt;I intend to add other metrics to this project, such as R0 calculations and forecasting.&lt;/p&gt;
+&lt;iframe width=&#34;720&#34; height=&#34;480&#34; scrolling=&#34;no&#34; frameborder=&#34;no&#34;  src=&#34;https://eric-cramer.shinyapps.io/covid19tracker/&#34;&gt;&lt;/iframe&gt;
+&lt;p&gt;Open the tracking tool in a separate window &lt;a href=&#34;https://eric-cramer.shinyapps.io/covid19tracker/&#34;&gt;here&lt;/a&gt;. GitHub repository &lt;a href=&#34;https://github.com/emcramer/covid19project&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Multiple linear regression in a distributed system</title>
+      <link>http://emcramer.github.io/post/multiple-linear-regression-in-a-distributed-system/</link>
+      <pubDate>Sat, 15 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>http://emcramer.github.io/post/multiple-linear-regression-in-a-distributed-system/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://emcramer.github.io/post/2020-02-15-multiple-linear-regression-in-a-distributed-system_files/linear_regression.png&#34; alt=&#34;Credit: XKCD&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In a previous &lt;a href=&#34;https://emcramer.github.io/post/starting-distributed-computing/&#34;&gt;post&lt;/a&gt; I talked about adapting a linear regression algorithm so it can be used in a distributed system. Essentially, a master computer oversees computations run on local data, and the algorithm pauses midway through to send summary statistics to the master. In this way, the master receives enough information to reconstruct the model without seeing the underlying data.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://emcramer.github.io/post/2020-02-15-multiple-linear-regression-in-a-distributed-system_files/example-distcomp.png&#34; alt=&#34;Example distributed computation system.&#34;&gt;&lt;/p&gt;
+&lt;p&gt;For a linear regression model, we can simply have the master iteratively pass candidate &lt;code&gt;\(\beta\)&lt;/code&gt;s values to to the workers, which then return their local sum of the residual squares. By minimizing the sum of the squared residuals on each iteration, the master can find the optimal values for the &lt;code&gt;\(\beta\)&lt;/code&gt;s in &lt;code&gt;\(y=\beta_0 + \beta_1x\)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;We can expand this from simple linear regression with a single predictor to multiple linear prediction with several predictors ($y=\beta_0 + \beta_1x + &amp;hellip; +\beta_nx$). The sum of the squared residuals is simply the summary statistic of a matrix operation. Therefore a master controller can pass a vector of &lt;code&gt;\(\beta\)&lt;/code&gt; parameters to the workers on each iteration and receive the RSS in return:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$$RSS_{local}=\sum_{i=1}^n{\begin{bmatrix} x_{1,1} &amp;amp; ... &amp;amp; x_{1,n} &amp;amp; \\   ... &amp;amp; ... &amp;amp; ... &amp;amp; \\  x_{m,1} &amp;amp; ... &amp;amp; x_{m,n} &amp;amp;  \end{bmatrix}\times\begin{bmatrix} \beta_0 \\ ... \\ \beta_m \end{bmatrix}}$$&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;With a few minor changes in &lt;a href=&#34;https://rextester.com/TDCUWC73705&#34;&gt;code&lt;/a&gt; from my previous post, we can adjust our loss function to accomodate a vector of &lt;code&gt;\(\beta\)&lt;/code&gt;s.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# define a residual sum of squares function to handle multiple sites
+multi.min.RSS &amp;lt;- function(sites, par){
+  rs &amp;lt;- 0
+  # calculate the residuals from each data source
+  for(site in sites){
+    tmp_mat &amp;lt;-as.matrix(site$data[,1:(ncol(site$data)-2)])
+    tmps &amp;lt;- par[1] + tmp_mat%*%par[-1] - site$data$y
+    rs &amp;lt;- rs + sum(tmps^2)
+  }
+  # return the square and sum of the residuals
+  return(rs)
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now all we need to do is simulate some multi-variate data and test everything out.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# general function for simulating a sample data set given parameters
+sim.data &amp;lt;- function(mu, sig, amt, seed, mpar, nl){
+  # Simulate data for the practice 
+  set.seed(seed)
+  x &amp;lt;- replicate(length(mpar)-1, rnorm(n=amt, mean=mu, sd=sig))
+  
+  # create the &amp;quot;true&amp;quot; equation for the regression
+  a.true &amp;lt;- mpar[-1]
+  b.true &amp;lt;- mpar[1]
+  y &amp;lt;- x%*%a.true+b.true
+  
+  # set the noise level
+  noise &amp;lt;- rnorm(n=amt, mean=0, sd=nl)
+  d &amp;lt;- data.frame(x
+                  , &amp;quot;y_true&amp;quot;=y
+                  , &amp;quot;y&amp;quot;=y + noise)
+  return(d)
+}
+
+true_vals &amp;lt;- c(2,4,6,8)
+
+sim.data1 &amp;lt;-sim.data(10,2,100,2020,true_vals,1)
+sim.data2 &amp;lt;- sim.data(10,2,100,2019,true_vals,1)
+sites &amp;lt;- list(site1 = list(data=sim.data1), site2 = list(data=sim.data2))
+
+knitr::kable(head(sim.data1))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;right&#34;&gt;X1&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;X2&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;X3&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;y_true&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;y&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;right&#34;&gt;10.753944&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;6.542432&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;8.540934&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;152.5978&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;153.5145&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;right&#34;&gt;10.603097&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;8.017478&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;11.702755&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;186.1393&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;185.9124&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;right&#34;&gt;7.803954&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;8.828989&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;9.207017&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;159.8459&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;161.0281&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;right&#34;&gt;7.739188&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;10.767043&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;10.813357&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;184.0659&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;185.5874&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;right&#34;&gt;4.406931&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;11.493330&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;7.922893&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;151.9708&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;153.4088&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;right&#34;&gt;11.441147&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;8.143158&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;7.488237&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;156.5294&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;158.8567&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;knitr::kable(head(sim.data2))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;right&#34;&gt;X1&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;X2&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;X3&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;y_true&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;y&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;right&#34;&gt;11.477045&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;8.309900&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;11.441690&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;189.3011&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;189.1410&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;right&#34;&gt;8.970479&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;11.715855&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;9.210739&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;181.8630&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;181.7065&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;right&#34;&gt;6.719637&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;8.632787&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;11.965325&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;176.3979&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;177.0496&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;right&#34;&gt;11.832074&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;9.978611&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;7.191396&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;166.7311&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;167.2667&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;right&#34;&gt;7.465036&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;7.191671&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;11.600407&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;167.8134&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;168.0076&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;right&#34;&gt;11.476496&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;12.783553&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;8.498515&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;192.5954&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;192.8948&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;We can test our loss function with a call to &lt;code&gt;optim&lt;/code&gt; and compare the results to the base R linear modeling function (and the true values of our simulation).&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;param.fit &amp;lt;- optim(par=c(0,0,0,0),
+                   fn = multi.min.RSS,
+                   hessian = TRUE,
+                   sites=sites)
+
+# stack the data frames vertically for later verification
+sim.data3 &amp;lt;- as.data.frame(rbind(sim.data1, sim.data2)) 
+mlm &amp;lt;- lm(y~., data=sim.data3[,-4])
+
+d &amp;lt;- data.frame(&amp;quot;True Betas&amp;quot;=true_vals
+           , &amp;quot;Base R Coefficients&amp;quot;=coef(mlm)
+           , &amp;quot;Distributed Coefficients&amp;quot;=param.fit$par)
+knitr::kable(d)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;True.Betas&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Base.R.Coefficients&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Distributed.Coefficients&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;(Intercept)&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2.604539&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2.642250&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;X1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4.018984&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4.021583&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;X2&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;6&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5.936988&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5.935438&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;X3&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;8&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;7.978939&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;7.973534&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Not far off!&lt;/p&gt;
+&lt;p&gt;You can run the full code &lt;a href=&#34;https://rextester.com/PGLE10656&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Predicting CRPS Limb Affectation</title>
+      <link>http://emcramer.github.io/project/apa2018/</link>
+      <pubDate>Tue, 21 Jan 2020 16:16:25 -0800</pubDate>
+      <guid>http://emcramer.github.io/project/apa2018/</guid>
+      <description>&lt;h1 id=&#34;predicting-crps-limb-affectation-from-physical-and-psychological-factors&#34;&gt;Predicting CRPS Limb Affectation from Physical and Psychological Factors&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.ninds.nih.gov/Disorders/Patient-Caregiver-Education/Fact-Sheets/Complex-Regional-Pain-Syndrome-Fact-Sheet&#34;&gt;Complex Regional Pain Syndrome (CRPS)&lt;/a&gt; is a severe and rare chronic pain condition that often spreads from an initially affected limb to other parts of the body. The underlying etiology and factors that influence the spread of CRPS are not well understood. Previous research has sought to explain the mechanism, onset, and pain severity of CRPS, however, the contribution of psychosocial factors to CRPS affectation has not been investigated fully.&lt;/p&gt;
+&lt;p&gt;I extracted data from the &lt;a href=&#34;https://choir.stanford.edu/&#34;&gt;Collaborative Health Outcomes Information Registry (CHOIR)&lt;/a&gt;, which is an electronic patient registry and learning health system. Then I trained a random forest model to describe the role of psychophysical and psychosocial factors as predictors of CRPS limb affectation. To train my model, I defined several &amp;ldquo;classes&amp;rdquo; of CRPS affectation such as ipsilateral and contralateral spread.&lt;/p&gt;
+&lt;p&gt;I presented my findings at the American Psychological Association&#39;s 126th annual convention in San Francisco, and my presentation received the Society for Health Psychology&#39;s Oustanding Poster Presentation award.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;apa-sfhp-award-2.jpg&#34; alt=&#34;Award certificate&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Modeling Calmodulin</title>
+      <link>http://emcramer.github.io/project/bmi214/</link>
+      <pubDate>Tue, 21 Jan 2020 16:03:23 -0800</pubDate>
+      <guid>http://emcramer.github.io/project/bmi214/</guid>
+      <description>&lt;h1 id=&#34;modeling-calmodulin&#34;&gt;Modeling Calmodulin&lt;/h1&gt;
+&lt;p&gt;One of our projects in &lt;a href=&#34;http://explorecourses.stanford.edu/search?view=catalog&amp;filter-coursestatus-Active=on&amp;page=0&amp;catalog=&amp;academicYear=20152016&amp;q=cs+107e&amp;collapse=&#34;&gt;BMI 214 (Representational Algorithms for Molecular Biology)&lt;/a&gt; taught by &lt;a href=&#34;https://en.wikipedia.org/wiki/Russ_Altman&#34;&gt;Dr. Russ Altman&lt;/a&gt;, was to create a molecular dynamics simulation of a protein. &lt;a href=&#34;https://en.wikipedia.org/wiki/Molecular_dynamics&#34;&gt;Molecular Dynamics&lt;/a&gt; is using computers to simulate the interaction of atoms and molecules for a period of time under known laws of physics. I represented a fragment of the protein &lt;a href=&#34;https://en.wikipedia.org/wiki/Calmodulin&#34;&gt;calmodulin&lt;/a&gt; by simulating the interactions of its component atoms (each atom within each amino acid). This entails modeling (simulating) how each atom&#39;s mass, velocity, energy, and forces change over time, and calculating the effect of the previous moment in time on the subsequent moment.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Exon Mutability Score</title>
+      <link>http://emcramer.github.io/project/bmi273/</link>
+      <pubDate>Tue, 21 Jan 2020 11:36:43 -0800</pubDate>
+      <guid>http://emcramer.github.io/project/bmi273/</guid>
+      <description>&lt;h1 id=&#34;class-project&#34;&gt;Class Project&lt;/h1&gt;
+&lt;p&gt;For the final project of &lt;a href=&#34;http://explorecourses.stanford.edu/search?view=catalog&amp;amp;filter-coursestatus-Active=on&amp;amp;page=0&amp;amp;catalog=&amp;amp;academicYear=20172018&amp;amp;q=biomedin273a&amp;amp;collapse=&#34;&gt;BMI 273A (The Human Genome Source Code)&lt;/a&gt; taught by &lt;a href=&#34;http://bejerano.stanford.edu/pi.html&#34;&gt;Dr. Gill Bejarano&lt;/a&gt;, I worked with a group to devise a statistic to measure how &amp;ldquo;mutable&amp;rdquo; a given exon is (some mutations impact the function of an exoonic product, while others do not, ie. synonymous vs. nonsynonymous mutations). We used the &lt;a href=&#34;http://exac.broadinstitute.org/&#34;&gt;ExAC&lt;/a&gt; dataset to isolate exons and calculate an &lt;em&gt;EMTM&lt;/em&gt; score, our version of the &lt;a href=&#34;https://doi.org/10.1371/journal.pgen.1003709&#34;&gt;RVIS score&lt;/a&gt;. We presented our metric, and maintain the results, explorations, and code on &lt;a href=&#34;https://github.com/ostrowr/cs273a-project&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;rvis-lollipop.png&#34; alt=&#34;Exon mutabilities of each chromosome based on our mutability score.&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Factors Associated With Acute Pain Estimation,  Postoperative Pain Resolution,  Opioid Cessation,  and Recovery</title>
+      <link>http://emcramer.github.io/publication/hah-2019/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://emcramer.github.io/publication/hah-2019/</guid>
+      <description>&lt;script type=&#34;text/javascript&#34; src=&#34;https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js&#34;&gt;&lt;/script&gt;&lt;div class=&#34;altmetric-embed&#34; data-badge-type=&#34;donut&#34; data-altmetric-id=&#34;56321663&#34; /&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

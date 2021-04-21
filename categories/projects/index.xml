@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>projects | Eric Cramer</title>
+    <link>http://emcramer.github.io/categories/projects/</link>
+      <atom:link href="http://emcramer.github.io/categories/projects/index.xml" rel="self" type="application/rss+xml" />
+    <description>projects</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© `2021`</copyright><lastBuildDate>Sat, 28 Mar 2020 11:36:43 -0800</lastBuildDate>
+    <image>
+      <url>http://emcramer.github.io/images/icon_hud9b055eee01d4de0eb2efdace9b98bee_9571_512x512_fill_lanczos_center_2.png</url>
+      <title>projects</title>
+      <link>http://emcramer.github.io/categories/projects/</link>
+    </image>
+    
+    <item>
+      <title>COVID-19 Tracker</title>
+      <link>http://emcramer.github.io/project/covid19tracker/</link>
+      <pubDate>Sat, 28 Mar 2020 11:36:43 -0800</pubDate>
+      <guid>http://emcramer.github.io/project/covid19tracker/</guid>
+      <description>&lt;h1 id=&#34;tracking-the-covid-19-pandemic&#34;&gt;Tracking the COVID-19 Pandemic&lt;/h1&gt;
+&lt;p&gt;After my county instituted a shelter-in-place lockdown due to the COVID-19 pandemic (caused by the SARS-CoV-2 virus), I was curious to know how bad the situation was. The nonpartisan website &lt;a href=&#34;https://usafacts.org/&#34;&gt;usafacts.org/&lt;/a&gt; publishes national, state, and county level data for the United States, and provides a substantial amount of information for making your own calculations and conclusions.&lt;/p&gt;
+&lt;p&gt;I am particularly interested in the &lt;strong&gt;change rate&lt;/strong&gt;, the change in the number of new cases of COVID-19 per day. This simple calculation gives an estimate of how quickly the virus is spreading, and whether measures put in place to curb the disease are working.&lt;/p&gt;
+&lt;p&gt;I intend to add other metrics to this project, such as R0 calculations and forecasting.&lt;/p&gt;
+&lt;iframe width=&#34;720&#34; height=&#34;480&#34; scrolling=&#34;no&#34; frameborder=&#34;no&#34;  src=&#34;https://eric-cramer.shinyapps.io/covid19tracker/&#34;&gt;&lt;/iframe&gt;
+&lt;p&gt;Open the tracking tool in a separate window &lt;a href=&#34;https://eric-cramer.shinyapps.io/covid19tracker/&#34;&gt;here&lt;/a&gt;. GitHub repository &lt;a href=&#34;https://github.com/emcramer/covid19project&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

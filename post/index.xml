@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts | Eric Cramer</title>
+    <link>http://emcramer.github.io/post/</link>
+      <atom:link href="http://emcramer.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <description>Posts</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© `2021`</copyright><lastBuildDate>Sat, 15 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://emcramer.github.io/images/icon_hud9b055eee01d4de0eb2efdace9b98bee_9571_512x512_fill_lanczos_center_2.png</url>
+      <title>Posts</title>
+      <link>http://emcramer.github.io/post/</link>
+    </image>
+    
+    <item>
+      <title>Multiple linear regression in a distributed system</title>
+      <link>http://emcramer.github.io/post/multiple-linear-regression-in-a-distributed-system/</link>
+      <pubDate>Sat, 15 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>http://emcramer.github.io/post/multiple-linear-regression-in-a-distributed-system/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://emcramer.github.io/post/2020-02-15-multiple-linear-regression-in-a-distributed-system_files/linear_regression.png&#34; alt=&#34;Credit: XKCD&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In a previous &lt;a href=&#34;https://emcramer.github.io/post/starting-distributed-computing/&#34;&gt;post&lt;/a&gt; I talked about adapting a linear regression algorithm so it can be used in a distributed system. Essentially, a master computer oversees computations run on local data, and the algorithm pauses midway through to send summary statistics to the master. In this way, the master receives enough information to reconstruct the model without seeing the underlying data.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://emcramer.github.io/post/2020-02-15-multiple-linear-regression-in-a-distributed-system_files/example-distcomp.png&#34; alt=&#34;Example distributed computation system.&#34;&gt;&lt;/p&gt;
+&lt;p&gt;For a linear regression model, we can simply have the master iteratively pass candidate &lt;code&gt;\(\beta\)&lt;/code&gt;s values to to the workers, which then return their local sum of the residual squares. By minimizing the sum of the squared residuals on each iteration, the master can find the optimal values for the &lt;code&gt;\(\beta\)&lt;/code&gt;s in &lt;code&gt;\(y=\beta_0 + \beta_1x\)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;We can expand this from simple linear regression with a single predictor to multiple linear prediction with several predictors ($y=\beta_0 + \beta_1x + &amp;hellip; +\beta_nx$). The sum of the squared residuals is simply the summary statistic of a matrix operation. Therefore a master controller can pass a vector of &lt;code&gt;\(\beta\)&lt;/code&gt; parameters to the workers on each iteration and receive the RSS in return:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$$RSS_{local}=\sum_{i=1}^n{\begin{bmatrix} x_{1,1} &amp;amp; ... &amp;amp; x_{1,n} &amp;amp; \\   ... &amp;amp; ... &amp;amp; ... &amp;amp; \\  x_{m,1} &amp;amp; ... &amp;amp; x_{m,n} &amp;amp;  \end{bmatrix}\times\begin{bmatrix} \beta_0 \\ ... \\ \beta_m \end{bmatrix}}$$&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;With a few minor changes in &lt;a href=&#34;https://rextester.com/TDCUWC73705&#34;&gt;code&lt;/a&gt; from my previous post, we can adjust our loss function to accomodate a vector of &lt;code&gt;\(\beta\)&lt;/code&gt;s.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# define a residual sum of squares function to handle multiple sites
+multi.min.RSS &amp;lt;- function(sites, par){
+  rs &amp;lt;- 0
+  # calculate the residuals from each data source
+  for(site in sites){
+    tmp_mat &amp;lt;-as.matrix(site$data[,1:(ncol(site$data)-2)])
+    tmps &amp;lt;- par[1] + tmp_mat%*%par[-1] - site$data$y
+    rs &amp;lt;- rs + sum(tmps^2)
+  }
+  # return the square and sum of the residuals
+  return(rs)
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now all we need to do is simulate some multi-variate data and test everything out.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# general function for simulating a sample data set given parameters
+sim.data &amp;lt;- function(mu, sig, amt, seed, mpar, nl){
+  # Simulate data for the practice 
+  set.seed(seed)
+  x &amp;lt;- replicate(length(mpar)-1, rnorm(n=amt, mean=mu, sd=sig))
+  
+  # create the &amp;quot;true&amp;quot; equation for the regression
+  a.true &amp;lt;- mpar[-1]
+  b.true &amp;lt;- mpar[1]
+  y &amp;lt;- x%*%a.true+b.true
+  
+  # set the noise level
+  noise &amp;lt;- rnorm(n=amt, mean=0, sd=nl)
+  d &amp;lt;- data.frame(x
+                  , &amp;quot;y_true&amp;quot;=y
+                  , &amp;quot;y&amp;quot;=y + noise)
+  return(d)
+}
+
+true_vals &amp;lt;- c(2,4,6,8)
+
+sim.data1 &amp;lt;-sim.data(10,2,100,2020,true_vals,1)
+sim.data2 &amp;lt;- sim.data(10,2,100,2019,true_vals,1)
+sites &amp;lt;- list(site1 = list(data=sim.data1), site2 = list(data=sim.data2))
+
+knitr::kable(head(sim.data1))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;right&#34;&gt;X1&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;X2&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;X3&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;y_true&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;y&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;right&#34;&gt;10.753944&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;6.542432&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;8.540934&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;152.5978&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;153.5145&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;right&#34;&gt;10.603097&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;8.017478&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;11.702755&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;186.1393&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;185.9124&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;right&#34;&gt;7.803954&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;8.828989&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;9.207017&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;159.8459&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;161.0281&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;right&#34;&gt;7.739188&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;10.767043&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;10.813357&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;184.0659&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;185.5874&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;right&#34;&gt;4.406931&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;11.493330&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;7.922893&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;151.9708&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;153.4088&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;right&#34;&gt;11.441147&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;8.143158&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;7.488237&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;156.5294&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;158.8567&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;knitr::kable(head(sim.data2))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;right&#34;&gt;X1&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;X2&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;X3&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;y_true&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;y&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;right&#34;&gt;11.477045&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;8.309900&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;11.441690&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;189.3011&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;189.1410&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;right&#34;&gt;8.970479&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;11.715855&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;9.210739&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;181.8630&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;181.7065&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;right&#34;&gt;6.719637&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;8.632787&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;11.965325&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;176.3979&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;177.0496&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;right&#34;&gt;11.832074&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;9.978611&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;7.191396&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;166.7311&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;167.2667&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;right&#34;&gt;7.465036&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;7.191671&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;11.600407&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;167.8134&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;168.0076&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;right&#34;&gt;11.476496&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;12.783553&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;8.498515&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;192.5954&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;192.8948&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;We can test our loss function with a call to &lt;code&gt;optim&lt;/code&gt; and compare the results to the base R linear modeling function (and the true values of our simulation).&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;param.fit &amp;lt;- optim(par=c(0,0,0,0),
+                   fn = multi.min.RSS,
+                   hessian = TRUE,
+                   sites=sites)
+
+# stack the data frames vertically for later verification
+sim.data3 &amp;lt;- as.data.frame(rbind(sim.data1, sim.data2)) 
+mlm &amp;lt;- lm(y~., data=sim.data3[,-4])
+
+d &amp;lt;- data.frame(&amp;quot;True Betas&amp;quot;=true_vals
+           , &amp;quot;Base R Coefficients&amp;quot;=coef(mlm)
+           , &amp;quot;Distributed Coefficients&amp;quot;=param.fit$par)
+knitr::kable(d)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;True.Betas&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Base.R.Coefficients&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Distributed.Coefficients&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;(Intercept)&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2.604539&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2.642250&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;X1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4.018984&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4.021583&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;X2&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;6&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5.936988&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5.935438&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;X3&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;8&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;7.978939&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;7.973534&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Not far off!&lt;/p&gt;
+&lt;p&gt;You can run the full code &lt;a href=&#34;https://rextester.com/PGLE10656&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Starting distributed computing</title>
+      <link>http://emcramer.github.io/post/starting-distributed-computing/</link>
+      <pubDate>Thu, 16 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>http://emcramer.github.io/post/starting-distributed-computing/</guid>
+      <description>
+
+
+&lt;div id=&#34;quick-intro&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Quick Intro&lt;/h2&gt;
+&lt;p&gt;As hospitals, care providers, and private companies collect more data, they develop rich databases that can be used to improve patient care (e.g. through precision medicine). Research institutions often cannot share their data with each other, however, out of privacy concerns and HIPAA compliance. This poses a hurdle to inter-institutional collaboration, and creates a research bottleneck. It is an unfortunate instance where good data security practices can create roadblocks to inter-institutional collaboration, which has the potential to solve problems such as &lt;a href=&#34;https://medium.com/better-programming/bias-racist-robots-and-ai-the-problems-in-the-coding-that-coders-fail-to-see-305f6f324793&#34;&gt;bias in AI&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;One way we may circumvent this issue is with distributed computation. Through an appropriately configured distributed computing service, it is possible to fit models on data that match by &lt;a href=&#34;https://datacarpentry.org/stata-economics/img/append-merge.png&#34;&gt;stacking vertically&lt;/a&gt;, but is otherwise electronically separate.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://datacarpentry.org/stata-economics/img/append-merge.png&#34; alt=&#34;&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Partitioning data&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The underlying premise is that most (all?) computations for modelling require multiple steps. If we take values calculated during an intermediate step of a computation performed at individual sites, then we can aggregate these values in a central location to produce a final model. Since the sites don’t talk to each other, and the central location only receives a summary statistic, &lt;strong&gt;none of the underlying information gets shared&lt;/strong&gt;. Each institution or entity can hold on to its data and maintain its security while still helping the common good.&lt;/p&gt;
+&lt;p&gt;That is the vision and purpose of the &lt;a href=&#34;https://cran.r-project.org/web/packages/distcomp/index.html&#34;&gt;&lt;code&gt;distcomp&lt;/code&gt;&lt;/a&gt; R package, which makes the distributed computation process simpler through a series of GUIs that walk a user through the process. The only hang up is there are currently very few options for computations optimized for this distribution process.&lt;/p&gt;
+&lt;p&gt;That is why in this post, I am going to go through prototyping a distributed computation before adding it to the distcomp package. I am going to start small, by adding a linear regression (which was not included in the initial list of possible distributed computations).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;prototyping-locally&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Prototyping Locally&lt;/h2&gt;
+&lt;p&gt;To do a proper distributed computation, you need to have multiple &lt;em&gt;sites&lt;/em&gt; and a &lt;em&gt;master&lt;/em&gt; controlling instance. This involves configuring a server or VM. But you don’t really need to do that to &lt;em&gt;prototype&lt;/em&gt; a computation and make sure you can integrate values at some intermediate step.&lt;/p&gt;
+&lt;p&gt;Consider computing the linear regression for some data set by minimizing the residual sum of squares. Given some set of data points &lt;span class=&#34;math inline&#34;&gt;\((x_i, y_i), i=1,...,n\)&lt;/span&gt;, we obtain a residual (error) value in prediction with a model &lt;span class=&#34;math inline&#34;&gt;\(r_i = f(x_i, \beta)\)&lt;/span&gt;. If this model is linear, &lt;span class=&#34;math inline&#34;&gt;\(f(x) = \beta_1 x + \beta_0\)&lt;/span&gt;, then we can optimize it by minimizing the sum of the residuals: &lt;span class=&#34;math inline&#34;&gt;\(\sum_{i=1}^n r_i^2\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;It is at this step that we can split up the computation. We have the master send out the parameters (e.g. &lt;span class=&#34;math inline&#34;&gt;\(\beta_0, \beta_1\)&lt;/span&gt;, etc.) for the computation to each of the participating sites. I can re-create this scenario locally by simulating two separate data sets.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# general function for simulating a sample data set given parameters
+sim.data &amp;lt;- function(mu, sig, amt, seed, mpar, nl){
+  # Simulate data for the practice 
+  set.seed(seed)
+  x &amp;lt;- rnorm(n=amt, mean=mu, sd=sig)
+  
+  # create the &amp;quot;true&amp;quot; equation for the regression
+  a.true &amp;lt;- mpar[1]
+  b.true &amp;lt;- mpar[2]
+  y &amp;lt;- x*a.true+b.true
+  
+  # set the noise level
+  noise &amp;lt;- rnorm(n=amt, mean=0, sd=nl)
+  d &amp;lt;- cbind(x,y,y + noise)
+  colnames(d) &amp;lt;- c(&amp;quot;x&amp;quot;, &amp;quot;y_true&amp;quot;,&amp;quot;y&amp;quot;)
+  return(as.data.frame(d))
+}
+
+sim.data1 &amp;lt;-sim.data(10,2,100,2020,c(2,8),1)
+sim.data2 &amp;lt;- sim.data(10,2,100,2019,c(2,8),1)
+sites &amp;lt;- list(site1 = list(data=sim.data1), site2 = list(data=sim.data2))
+
+head(sim.data1)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##           x   y_true        y
+## 1 10.753944 29.50789 27.77910
+## 2 10.603097 29.20619 28.21493
+## 3  7.803954 23.60791 23.02240
+## 4  7.739188 23.47838 23.86190
+## 5  4.406931 16.81386 17.56053
+## 6 11.441147 30.88229 29.95387&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(sim.data2)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##           x   y_true        y
+## 1 11.477045 30.95409 30.10904
+## 2  8.970479 25.94096 26.79889
+## 3  6.719637 21.43927 20.75567
+## 4 11.832074 31.66415 31.65345
+## 5  7.465036 22.93007 21.52591
+## 6 11.476496 30.95299 32.34477&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Here we simulate two data sets with 100 observations, a mean of 10, and a standard deviation of 2. The true values for the linear model are a slope of 2 and an intercept of 8.&lt;/p&gt;
+&lt;p&gt;Then each site will calculate the residuals from its own data and send back the summary statistic - the sum of its squared residuals.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# define a residual sum of squares function to handle multiple sites
+multi.min.RSS &amp;lt;- function(sites, par){
+  rs &amp;lt;- 0
+  # calculate the residuals from each data source
+  for(site in sites){
+    tmps &amp;lt;- par[1] + par[2] * site$data$x - site$data$y
+    rs &amp;lt;- rs + sum(tmps^2) #c(rs, tmps)
+  }
+  # return the square and sum of the residuals
+  return(rs)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;All that is left to do is solve for each site. We can use base R’s &lt;code&gt;optim&lt;/code&gt; function to do this.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;param.fit &amp;lt;- optim(par=c(0,1),
+                   fn = multi.min.RSS,
+                   hessian = TRUE,
+                   sites=sites)
+print(&amp;quot;Distributed linear model results:&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;Distributed linear model results:&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;print(paste(&amp;quot;Intercept: &amp;quot;, param.fit$par[1], &amp;quot; Slope: &amp;quot;, param.fit$par[2]))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;Intercept:  7.77183635600249  Slope:  2.00840909246344&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can compare the result’s to R’s built-in linear model function, &lt;code&gt;lm&lt;/code&gt; by stacking the data from the two “sites” and running a linear model on the full data set.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# stack the data frames vertically for later verification
+sim.data3 &amp;lt;- as.data.frame(rbind(sim.data1, sim.data2)) 
+print(&amp;quot;Base R linear model on the full data set:&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;Base R linear model on the full data set:&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;lm(y~x, data=sim.data3)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Call:
+## lm(formula = y ~ x, data = sim.data3)
+## 
+## Coefficients:
+## (Intercept)            x  
+##       7.776        2.008&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Pretty similar!&lt;/p&gt;
+&lt;p&gt;Click &lt;a href=&#34;https://rextester.com/TDCUWC73705&#34;&gt;here&lt;/a&gt; to run the code.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

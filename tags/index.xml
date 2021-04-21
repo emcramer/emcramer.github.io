@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags | Eric Cramer</title>
+    <link>http://emcramer.github.io/tags/</link>
+      <atom:link href="http://emcramer.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <description>Tags</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© `2021`</copyright><lastBuildDate>Sat, 28 Mar 2020 11:36:43 -0800</lastBuildDate>
+    <image>
+      <url>http://emcramer.github.io/images/icon_hud9b055eee01d4de0eb2efdace9b98bee_9571_512x512_fill_lanczos_center_2.png</url>
+      <title>Tags</title>
+      <link>http://emcramer.github.io/tags/</link>
+    </image>
+    
+    <item>
+      <title>bioinformatics</title>
+      <link>http://emcramer.github.io/tags/bioinformatics/</link>
+      <pubDate>Sat, 28 Mar 2020 11:36:43 -0800</pubDate>
+      <guid>http://emcramer.github.io/tags/bioinformatics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>epidemiology</title>
+      <link>http://emcramer.github.io/tags/epidemiology/</link>
+      <pubDate>Sat, 28 Mar 2020 11:36:43 -0800</pubDate>
+      <guid>http://emcramer.github.io/tags/epidemiology/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>computation</title>
+      <link>http://emcramer.github.io/tags/computation/</link>
+      <pubDate>Sat, 15 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>http://emcramer.github.io/tags/computation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>http://emcramer.github.io/tags/r/</link>
+      <pubDate>Sat, 15 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>http://emcramer.github.io/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>clinical informatics</title>
+      <link>http://emcramer.github.io/tags/clinical-informatics/</link>
+      <pubDate>Tue, 21 Jan 2020 16:16:25 -0800</pubDate>
+      <guid>http://emcramer.github.io/tags/clinical-informatics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>modeling</title>
+      <link>http://emcramer.github.io/tags/modeling/</link>
+      <pubDate>Tue, 21 Jan 2020 16:03:23 -0800</pubDate>
+      <guid>http://emcramer.github.io/tags/modeling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>genomics</title>
+      <link>http://emcramer.github.io/tags/genomics/</link>
+      <pubDate>Tue, 21 Jan 2020 11:36:43 -0800</pubDate>
+      <guid>http://emcramer.github.io/tags/genomics/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

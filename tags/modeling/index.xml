@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>modeling | Eric Cramer</title>
+    <link>http://emcramer.github.io/tags/modeling/</link>
+      <atom:link href="http://emcramer.github.io/tags/modeling/index.xml" rel="self" type="application/rss+xml" />
+    <description>modeling</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© `2021`</copyright><lastBuildDate>Tue, 21 Jan 2020 16:03:23 -0800</lastBuildDate>
+    <image>
+      <url>http://emcramer.github.io/images/icon_hud9b055eee01d4de0eb2efdace9b98bee_9571_512x512_fill_lanczos_center_2.png</url>
+      <title>modeling</title>
+      <link>http://emcramer.github.io/tags/modeling/</link>
+    </image>
+    
+    <item>
+      <title>Modeling Calmodulin</title>
+      <link>http://emcramer.github.io/project/bmi214/</link>
+      <pubDate>Tue, 21 Jan 2020 16:03:23 -0800</pubDate>
+      <guid>http://emcramer.github.io/project/bmi214/</guid>
+      <description>&lt;h1 id=&#34;modeling-calmodulin&#34;&gt;Modeling Calmodulin&lt;/h1&gt;
+&lt;p&gt;One of our projects in &lt;a href=&#34;http://explorecourses.stanford.edu/search?view=catalog&amp;filter-coursestatus-Active=on&amp;page=0&amp;catalog=&amp;academicYear=20152016&amp;q=cs+107e&amp;collapse=&#34;&gt;BMI 214 (Representational Algorithms for Molecular Biology)&lt;/a&gt; taught by &lt;a href=&#34;https://en.wikipedia.org/wiki/Russ_Altman&#34;&gt;Dr. Russ Altman&lt;/a&gt;, was to create a molecular dynamics simulation of a protein. &lt;a href=&#34;https://en.wikipedia.org/wiki/Molecular_dynamics&#34;&gt;Molecular Dynamics&lt;/a&gt; is using computers to simulate the interaction of atoms and molecules for a period of time under known laws of physics. I represented a fragment of the protein &lt;a href=&#34;https://en.wikipedia.org/wiki/Calmodulin&#34;&gt;calmodulin&lt;/a&gt; by simulating the interactions of its component atoms (each atom within each amino acid). This entails modeling (simulating) how each atom&#39;s mass, velocity, energy, and forces change over time, and calculating the effect of the previous moment in time on the subsequent moment.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

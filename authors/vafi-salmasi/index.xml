@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vafi Salmasi | Eric Cramer</title>
+    <link>http://emcramer.github.io/authors/vafi-salmasi/</link>
+      <atom:link href="http://emcramer.github.io/authors/vafi-salmasi/index.xml" rel="self" type="application/rss+xml" />
+    <description>Vafi Salmasi</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© `2021`</copyright><lastBuildDate>Sun, 24 Jan 2021 16:44:05 -0800</lastBuildDate>
+    <image>
+      <url>http://emcramer.github.io/images/icon_hud9b055eee01d4de0eb2efdace9b98bee_9571_512x512_fill_lanczos_center_2.png</url>
+      <title>Vafi Salmasi</title>
+      <link>http://emcramer.github.io/authors/vafi-salmasi/</link>
+    </image>
+    
+    <item>
+      <title>Development and validation of the Collaborative Health Outcomes Information Registry body map</title>
+      <link>http://emcramer.github.io/publication/scherrer-2021/</link>
+      <pubDate>Sun, 24 Jan 2021 16:44:05 -0800</pubDate>
+      <guid>http://emcramer.github.io/publication/scherrer-2021/</guid>
+      <description>&lt;script type=&#34;text/javascript&#34; src=&#34;https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js&#34;&gt;&lt;/script&gt;&lt;div class=&#34;altmetric-embed&#34; data-badge-type=&#34;donut&#34; data-altmetric-id=&#34;98609954&#34; /&gt;
+&lt;p&gt;&lt;strong&gt;Introduction:&lt;/strong&gt; 
+Critical for the diagnosis and treatment of chronic pain is the anatomical distribution of pain. Several body maps allow patients to indicate pain areas on paper; however, each has its limitations.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Objectives:&lt;/strong&gt; 
+To provide a comprehensive body map that can be universally applied across pain conditions, we developed the electronic Collaborative Health Outcomes Information Registry (CHOIR) self-report body map by performing an environmental scan and assessing existing body maps.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Methods:&lt;/strong&gt; 
+After initial validation using a Delphi technique, we compared (1) pain location questionnaire responses of 530 participants with chronic pain with (2) their pain endorsements on the CHOIR body map (CBM) graphic. A subset of participants (n = 278) repeated the survey 1 week later to assess test–retest reliability. Finally, we interviewed a patient cohort from a tertiary pain management clinic (n = 28) to identify reasons for endorsement discordances.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Results:&lt;/strong&gt; 
+The intraclass correlation coefficient between the total number of body areas endorsed on the survey and those from the body map was 0.86 and improved to 0.93 at follow-up. The intraclass correlation coefficient of the 2 body map graphics separated by 1 week was 0.93. Further examination demonstrated high consistency between the questionnaire and CBM graphic (&amp;lt;10% discordance) in most body areas except for the back and shoulders (≈15–19% discordance). Participants attributed inconsistencies to misinterpretation of body regions and laterality, the latter of which was addressed by modifying the instructions.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Conclusions:&lt;/strong&gt; 
+Our data suggest that the CBM is a valid and reliable instrument for assessing the distribution of pain.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

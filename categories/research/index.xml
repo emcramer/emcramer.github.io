@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>research | Eric Cramer</title>
+    <link>http://emcramer.github.io/categories/research/</link>
+      <atom:link href="http://emcramer.github.io/categories/research/index.xml" rel="self" type="application/rss+xml" />
+    <description>research</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© `2021`</copyright><lastBuildDate>Tue, 21 Jan 2020 16:16:25 -0800</lastBuildDate>
+    <image>
+      <url>http://emcramer.github.io/images/icon_hud9b055eee01d4de0eb2efdace9b98bee_9571_512x512_fill_lanczos_center_2.png</url>
+      <title>research</title>
+      <link>http://emcramer.github.io/categories/research/</link>
+    </image>
+    
+    <item>
+      <title>Predicting CRPS Limb Affectation</title>
+      <link>http://emcramer.github.io/project/apa2018/</link>
+      <pubDate>Tue, 21 Jan 2020 16:16:25 -0800</pubDate>
+      <guid>http://emcramer.github.io/project/apa2018/</guid>
+      <description>&lt;h1 id=&#34;predicting-crps-limb-affectation-from-physical-and-psychological-factors&#34;&gt;Predicting CRPS Limb Affectation from Physical and Psychological Factors&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.ninds.nih.gov/Disorders/Patient-Caregiver-Education/Fact-Sheets/Complex-Regional-Pain-Syndrome-Fact-Sheet&#34;&gt;Complex Regional Pain Syndrome (CRPS)&lt;/a&gt; is a severe and rare chronic pain condition that often spreads from an initially affected limb to other parts of the body. The underlying etiology and factors that influence the spread of CRPS are not well understood. Previous research has sought to explain the mechanism, onset, and pain severity of CRPS, however, the contribution of psychosocial factors to CRPS affectation has not been investigated fully.&lt;/p&gt;
+&lt;p&gt;I extracted data from the &lt;a href=&#34;https://choir.stanford.edu/&#34;&gt;Collaborative Health Outcomes Information Registry (CHOIR)&lt;/a&gt;, which is an electronic patient registry and learning health system. Then I trained a random forest model to describe the role of psychophysical and psychosocial factors as predictors of CRPS limb affectation. To train my model, I defined several &amp;ldquo;classes&amp;rdquo; of CRPS affectation such as ipsilateral and contralateral spread.&lt;/p&gt;
+&lt;p&gt;I presented my findings at the American Psychological Association&#39;s 126th annual convention in San Francisco, and my presentation received the Society for Health Psychology&#39;s Oustanding Poster Presentation award.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;apa-sfhp-award-2.jpg&#34; alt=&#34;Award certificate&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
