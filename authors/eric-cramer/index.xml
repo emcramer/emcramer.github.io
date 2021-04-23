@@ -5,12 +5,21 @@
     <link>http://emcramer.github.io/authors/eric-cramer/</link>
       <atom:link href="http://emcramer.github.io/authors/eric-cramer/index.xml" rel="self" type="application/rss+xml" />
     <description>Eric Cramer</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© `2021`</copyright><lastBuildDate>Sun, 18 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© `2021`</copyright><lastBuildDate>Fri, 23 Apr 2021 09:00:00 -0800</lastBuildDate>
     <image>
       <url>http://emcramer.github.io/images/icon_hud9b055eee01d4de0eb2efdace9b98bee_9571_512x512_fill_lanczos_center_2.png</url>
       <title>Eric Cramer</title>
       <link>http://emcramer.github.io/authors/eric-cramer/</link>
     </image>
+    
+    <item>
+      <title>The association of the Stanford Expectations of Treatment Scale (SETS) with expectations on pain and opioid dose in a patient-centered prescription opioid tapering program</title>
+      <link>http://emcramer.github.io/talk/aapm2021/</link>
+      <pubDate>Fri, 23 Apr 2021 09:00:00 -0800</pubDate>
+      <guid>http://emcramer.github.io/talk/aapm2021/</guid>
+      <description>&lt;p&gt;The Stanford Expectations of Treatment Scale (SETS) is a tool developed to measure patient outcome expectancy prior to treatment. It has been validated in patients receiving surgical and pain interventions, but its relationship with expectancies regarding opioid use tapering has not previously been examined. We aim to characterize the relationship between the SETS scores and patient expectancy regarding opioid tapering and pain levels post tapering.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Acute Pain Predictors of Remote Postoperative Pain Resolution After Hand Surgery</title>
@@ -19,15 +28,6 @@
       <guid>http://emcramer.github.io/publication/hah-2021/</guid>
       <description>&lt;script type=&#34;text/javascript&#34; src=&#34;https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js&#34;&gt;&lt;/script&gt;
 &lt;div class=&#34;altmetric-embed&#34; data-badge-type=&#34;donut&#34; data-altmetric-id=&#34;104265284&#34; data-doi=&#34;10.1007/s40122-021-00263-y&#34;&gt;&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>The association of the Stanford Expectations of Treatment Scale (SETS) with expectations on pain and opioid dose in a patient-centered prescription opioid tapering program</title>
-      <link>http://emcramer.github.io/talk/aapm2021/</link>
-      <pubDate>Sun, 24 Jan 2021 17:01:15 -0800</pubDate>
-      <guid>http://emcramer.github.io/talk/aapm2021/</guid>
-      <description>&lt;p&gt;The Stanford Expectations of Treatment Scale (SETS) is a tool developed to measure patient outcome expectancy prior to treatment. It has been validated in patients receiving surgical and pain interventions, but its relationship with expectancies regarding opioid use tapering has not previously been examined. We aim to characterize the relationship between the SETS scores and patient expectancy regarding opioid tapering and pain levels post tapering.&lt;/p&gt;
 </description>
     </item>
     

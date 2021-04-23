@@ -5,12 +5,52 @@
     <link>http://emcramer.github.io/authors/</link>
       <atom:link href="http://emcramer.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© `2021`</copyright><lastBuildDate>Sun, 18 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© `2021`</copyright><lastBuildDate>Fri, 23 Apr 2021 09:00:00 -0800</lastBuildDate>
     <image>
       <url>http://emcramer.github.io/images/icon_hud9b055eee01d4de0eb2efdace9b98bee_9571_512x512_fill_lanczos_center_2.png</url>
       <title>Authors</title>
       <link>http://emcramer.github.io/authors/</link>
     </image>
+    
+    <item>
+      <title>Beth Darnall</title>
+      <link>http://emcramer.github.io/authors/beth-darnall/</link>
+      <pubDate>Fri, 23 Apr 2021 09:00:00 -0800</pubDate>
+      <guid>http://emcramer.github.io/authors/beth-darnall/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Eric Cramer</title>
+      <link>http://emcramer.github.io/authors/eric-cramer/</link>
+      <pubDate>Fri, 23 Apr 2021 09:00:00 -0800</pubDate>
+      <guid>http://emcramer.github.io/authors/eric-cramer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Luzmercy Perez</title>
+      <link>http://emcramer.github.io/authors/luzmercy-perez/</link>
+      <pubDate>Fri, 23 Apr 2021 09:00:00 -0800</pubDate>
+      <guid>http://emcramer.github.io/authors/luzmercy-perez/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Maisa Ziadni</title>
+      <link>http://emcramer.github.io/authors/maisa-ziadni/</link>
+      <pubDate>Fri, 23 Apr 2021 09:00:00 -0800</pubDate>
+      <guid>http://emcramer.github.io/authors/maisa-ziadni/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sean Mackey</title>
+      <link>http://emcramer.github.io/authors/sean-mackey/</link>
+      <pubDate>Fri, 23 Apr 2021 09:00:00 -0800</pubDate>
+      <guid>http://emcramer.github.io/authors/sean-mackey/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Catherine Curtin</title>
@@ -29,14 +69,6 @@
     </item>
     
     <item>
-      <title>Eric Cramer</title>
-      <link>http://emcramer.github.io/authors/eric-cramer/</link>
-      <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>
-      <guid>http://emcramer.github.io/authors/eric-cramer/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Ian Carroll</title>
       <link>http://emcramer.github.io/authors/ian-carroll/</link>
       <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>
@@ -49,38 +81,6 @@
       <link>http://emcramer.github.io/authors/jennifer-m.-hah/</link>
       <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>
       <guid>http://emcramer.github.io/authors/jennifer-m.-hah/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Beth Darnall</title>
-      <link>http://emcramer.github.io/authors/beth-darnall/</link>
-      <pubDate>Sun, 24 Jan 2021 17:01:15 -0800</pubDate>
-      <guid>http://emcramer.github.io/authors/beth-darnall/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Luzmercy Perez</title>
-      <link>http://emcramer.github.io/authors/luzmercy-perez/</link>
-      <pubDate>Sun, 24 Jan 2021 17:01:15 -0800</pubDate>
-      <guid>http://emcramer.github.io/authors/luzmercy-perez/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Maisa Ziadni</title>
-      <link>http://emcramer.github.io/authors/maisa-ziadni/</link>
-      <pubDate>Sun, 24 Jan 2021 17:01:15 -0800</pubDate>
-      <guid>http://emcramer.github.io/authors/maisa-ziadni/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Sean Mackey</title>
-      <link>http://emcramer.github.io/authors/sean-mackey/</link>
-      <pubDate>Sun, 24 Jan 2021 17:01:15 -0800</pubDate>
-      <guid>http://emcramer.github.io/authors/sean-mackey/</guid>
       <description></description>
     </item>
     
@@ -362,9 +362,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://emcramer.github.io/authors/admin/</guid>
       <description>&lt;p&gt;I am a Data Analyst and researcher in the &lt;a href=&#34;https://snapl.stanford.edu/&#34;&gt;Systems Neuroscience and Pain Laboratory&lt;/a&gt; at the Stanford University School of Medicine. My educational background is in biomedical computation and engineering, and I have experience working in in a variety of fields and research laboratories from clinical informatics with electronic health records to single-cell data analysis and image processing. Currently, I develop machine learning pipelines for finding patterns in EHR to improve patient care, and work on electronic data capture (EDC) tools to improve research infrastructure (among other projects).&lt;/p&gt;
-&lt;p&gt;My previous research is varied. I &lt;a href=&#34;https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2726711&#34;&gt;explored&lt;/a&gt; the implications of different factors in predicting pain resolution and opioid use cessation in patients following surgery. In another &lt;a href=&#34;https://egems.academyhealth.org/articles/10.5334/egems.307/&#34;&gt;project&lt;/a&gt;, I looked at the incidence of pressure ulcers in the ICU and developed a model to predict which patients will develop ulcers. Most recently, I worked in a laboratory at the &lt;a href=&#34;https://institut-curie.org/&#34;&gt;Institut Curie&lt;/a&gt; in Paris, France to investigate the behavior of CD4 and CD8 T cells in the tumor microenvironment.&lt;/p&gt;
+&lt;!--My previous research is varied. I [explored](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2726711) the implications of different factors in predicting pain resolution and opioid use cessation in patients following surgery. In another [project](https://egems.academyhealth.org/articles/10.5334/egems.307/), I looked at the incidence of pressure ulcers in the ICU and developed a model to predict which patients will develop ulcers. Most recently, I worked in a laboratory at the [Institut Curie](https://institut-curie.org/) in Paris, France to investigate the behavior of CD4 and CD8 T cells in the tumor microenvironment.--&gt;
 &lt;p&gt;I completed my Master of Science (M.S.) in Biomedical Informatics at Stanford University School of Medicine, and I received my Bachelor’s of Science (B.S.) in Biomedical Computation from the Stanford University School of Engineering. My research interests include biomedical data mining, developing tools to improve bio-imaging, and creating novel machine learning algorithms for the biomedical research space.&lt;/p&gt;
-&lt;p&gt;While I was an undergraduate, I was a member of Stanford’s NCAA Division I wrestling team, I tutored chemistry courses for underclassmen, and I led &lt;a href=&#34;http://adventure.stanford.edu/spot/&#34;&gt;Stanford Pre-Orientation Trips (SPOT)&lt;/a&gt; for incoming freshmen. I currently help out as an assistant coach for the local high school and middle school wrestling teams, and I enjoy outdoor activities in my spare time. My long term goal is to attend a medical school dual degree program to earn a MD-PhD, and continue my explorations in the patient-centered bioinformatics space.&lt;/p&gt;
+&lt;p&gt;While I was an undergraduate, I was a member of Stanford’s NCAA Division I wrestling team, I tutored chemistry courses for underclassmen, and I led &lt;a href=&#34;http://adventure.stanford.edu/spot/&#34;&gt;Stanford Pre-Orientation Trips (SPOT)&lt;/a&gt; for incoming freshmen. I currently help out as an assistant coach for the local high school and middle school wrestling teams, and I enjoy outdoor activities in my spare time. My long term goal is to attend a medical school dual degree program to earn a MD-PhD and continue my explorations in the patient-centered bioinformatics space.&lt;/p&gt;
 </description>
     </item>
     
