@@ -120,6 +120,44 @@
             flex-direction: column;
             justify-content: center;
             animation: fadeIn 0.8s ease-out 0.2s both;
+            position: relative;
+        }
+
+        /* Network canvas background */
+        #networkCanvas {
+            position: absolute;
+            top: 0; left: -2rem;
+            width: calc(100% + 4rem);
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.13;
+        }
+
+        /* Profile photo hover */
+        .name-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        .profile-photo {
+            position: absolute;
+            top: -10px;
+            left: calc(100% + 1.5rem);
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--border);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+            opacity: 0;
+            transform: translateY(6px) scale(0.95);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            pointer-events: none;
+        }
+
+        .name-wrapper:hover .profile-photo {
+            opacity: 1;
+            transform: translateY(0) scale(1);
         }
 
         @keyframes fadeIn {
@@ -401,7 +439,8 @@
     </header>
 
     <section class="hero">
-        <h1>Eric Cramer</h1>
+        <canvas id="networkCanvas" aria-hidden="true"></canvas>
+        <h1><span class="name-wrapper">Eric Cramer<img class="profile-photo" src="profile.png" alt="Eric Cramer"></span></h1>
         <p class="subtitle">MD-PhD Candidate &middot; Computational Oncology</p>
         <p class="tagline">
             Bridging <span class="accent-text">medicine</span>, <span class="accent-text">mathematical modeling</span>,
@@ -437,7 +476,7 @@
                     <li>
                         <strong>PhD, Biomedical Engineering</strong><br>
                         Oregon Health &amp; Science University, 2023&ndash;Present<br>
-                        <em>Thesis:</em> Mathematical and computational modeling for precision oncology using simulation and deep learning<br>
+                        <em>Thesis:</em> Mathematical and computational modeling for precision oncology using simulation and deep learning (working title)<br>
                         <em>Advisors:</em> Dr. Young Hwan Chang &amp; Dr. Laura Heiser
                     </li>
                     <li>
@@ -582,5 +621,89 @@
         <p>&copy; 2026 Eric Cramer. All rights reserved.</p>
     </footer>
 
+    <script>
+    (function () {
+        const canvas = document.getElementById('networkCanvas');
+        const ctx = canvas.getContext('2d');
+        const NODE_COUNT = 38;
+        const CONNECT_DIST = 130;
+        const NODE_COLOR = '#1a4d2e';
+        const EDGE_COLOR = '#1a4d2e';
+        let nodes = [];
+        let W, H;
+
+        function resize() {
+            W = canvas.offsetWidth;
+            H = canvas.offsetHeight;
+            canvas.width  = W;
+            canvas.height = H;
+        }
+
+        function initNodes() {
+            nodes = [];
+            for (let i = 0; i < NODE_COUNT; i++) {
+                nodes.push({
+                    x:  Math.random() * W,
+                    y:  Math.random() * H,
+                    vx: (Math.random() - 0.5) * 0.25,
+                    vy: (Math.random() - 0.5) * 0.25,
+                    r:  Math.random() * 2 + 1.5
+                });
+            }
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, W, H);
+
+            // Edges
+            ctx.strokeStyle = EDGE_COLOR;
+            ctx.lineWidth = 0.8;
+            for (let i = 0; i < nodes.length; i++) {
+                for (let j = i + 1; j < nodes.length; j++) {
+                    const dx = nodes[i].x - nodes[j].x;
+                    const dy = nodes[i].y - nodes[j].y;
+                    const d  = Math.sqrt(dx * dx + dy * dy);
+                    if (d < CONNECT_DIST) {
+                        ctx.globalAlpha = 1 - d / CONNECT_DIST;
+                        ctx.beginPath();
+                        ctx.moveTo(nodes[i].x, nodes[i].y);
+                        ctx.lineTo(nodes[j].x, nodes[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+
+            // Nodes
+            ctx.globalAlpha = 1;
+            ctx.fillStyle = NODE_COLOR;
+            for (const n of nodes) {
+                ctx.beginPath();
+                ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function update() {
+            for (const n of nodes) {
+                n.x += n.vx;
+                n.y += n.vy;
+                if (n.x < 0 || n.x > W) n.vx *= -1;
+                if (n.y < 0 || n.y > H) n.vy *= -1;
+            }
+        }
+
+        function loop() {
+            update();
+            draw();
+            requestAnimationFrame(loop);
+        }
+
+        resize();
+        initNodes();
+        loop();
+
+        window.addEventListener('resize', () => { resize(); initNodes(); });
+    })();
+    </script>
 </body>
 </html>
