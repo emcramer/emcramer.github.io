@@ -117,8 +117,9 @@
             margin: 0 auto;
             min-height: 60vh;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+            gap: 4rem;
             animation: fadeIn 0.8s ease-out 0.2s both;
             position: relative;
         }
@@ -133,31 +134,38 @@
             opacity: 0.13;
         }
 
-        /* Profile photo hover */
-        .name-wrapper {
+        /* Hero text column */
+        .hero-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            position: relative; /* above canvas */
+        }
+
+        /* Profile photo column */
+        .hero-photo {
+            flex-shrink: 0;
+            width: 200px;
             position: relative;
-            display: inline-block;
         }
 
         .profile-photo {
-            position: absolute;
-            top: -10px;
-            left: calc(100% + 1.5rem);
-            width: 160px;
-            height: 160px;
+            display: block;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid var(--border);
             box-shadow: 0 8px 30px rgba(0,0,0,0.12);
             opacity: 0;
-            transform: translateY(6px) scale(0.95);
-            transition: opacity 0.3s ease, transform 0.3s ease;
-            pointer-events: none;
+            transform: scale(0.94);
+            transition: opacity 0.4s ease, transform 0.4s ease;
         }
 
-        .name-wrapper:hover .profile-photo {
+        /* Reveal photo when hovering the name */
+        .hero:has(h1:hover) .profile-photo {
             opacity: 1;
-            transform: translateY(0) scale(1);
+            transform: scale(1);
         }
 
         @keyframes fadeIn {
@@ -406,6 +414,14 @@
         footer p { opacity: 0.9; font-size: 0.9rem; }
 
         @media (max-width: 768px) {
+            .hero { flex-direction: column; gap: 2rem; align-items: flex-start; }
+            .hero-photo { width: 100%; display: flex; justify-content: center; order: 1; }
+            .profile-photo {
+                opacity: 1;
+                transform: scale(1);
+                width: 130px;
+                height: 130px;
+            }
             .hero h1 { font-size: 2.5rem; }
             .hero .subtitle { font-size: 1.2rem; }
             .about-content { grid-template-columns: 1fr; gap: 2rem; }
@@ -440,13 +456,18 @@
 
     <section class="hero">
         <canvas id="networkCanvas" aria-hidden="true"></canvas>
-        <h1><span class="name-wrapper">Eric Cramer<img class="profile-photo" src="profile.png" alt="Eric Cramer"></span></h1>
-        <p class="subtitle">MD-PhD Candidate &middot; Computational Oncology</p>
-        <p class="tagline">
-            Bridging <span class="accent-text">medicine</span>, <span class="accent-text">mathematical modeling</span>,
-            and <span class="accent-text">machine learning</span> to advance precision oncology and
-            transform cancer treatment through data-driven insights.
-        </p>
+        <div class="hero-content">
+            <h1>Eric Cramer</h1>
+            <p class="subtitle">MD-PhD Candidate &middot; Computational Oncology</p>
+            <p class="tagline">
+                Bridging <span class="accent-text">medicine</span>, <span class="accent-text">mathematical modeling</span>,
+                and <span class="accent-text">machine learning</span> to advance precision oncology and
+                transform cancer treatment through data-driven insights.
+            </p>
+        </div>
+        <div class="hero-photo">
+            <img class="profile-photo" src="profile.png" alt="Eric Cramer">
+        </div>
     </section>
 
     <section id="about">
